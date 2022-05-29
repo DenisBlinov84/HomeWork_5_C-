@@ -19,25 +19,25 @@ int[] MassNums(int size)
 
     for (int i = 0; i < size; i++)
     {
-        arr[i] = newRandom().Next(1, 11);
+        arr[i] = new Random().Next(1, 11);
     }
     return arr;
 }
 
-int[] PairsNum(int[]arr)
+int[] PairsNum(int[] arr)
 {
     int size = arr.Length;
-    int[] new_arr = new int[size/2];
+    int[] new_arr = new int[size / 2];
 
-    if (size%2==1)
+    if (size % 2 == 1)
     {
-        new_arr= new int[size/2+1];
-        new_arr[new_arr.Length-1]=arr[size/2];
+        new_arr = new int[size / 2 + 1];
+        new_arr[new_arr.Length - 1] = arr[size / 2];
     }
 
-    for (int i =0; i<size/2;i++)
+    for (int i = 0; i < size / 2; i++)
     {
-        new_arr[i]=arr[i]*arr[size-i-1];
+        new_arr[i] = arr[i] * arr[size - i - 1];
     }
     return new_arr;
 }
@@ -47,8 +47,8 @@ Print(arr_1);
 int[] arr_1_new = PairsNum(arr_1);
 Print(arr_1_new);
 
-int[]arr_2=MassNums(6);
+int[] arr_2 = MassNums(6);
 Print(arr_2);
-int[]arr_2_new=PairsNum(arr_2);
+int[] arr_2_new = PairsNum(arr_2);
 Print(arr_2_new);
 
